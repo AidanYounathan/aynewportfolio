@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,22 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const manrope = localFont({
+  src: [
+    { path: '../public/fonts/Manrope/static/Manrope-ExtraLight.ttf', weight: '200', style: 'normal' },
+    { path: '../public/fonts/Manrope/static/Manrope-Light.ttf', weight: '300', style: 'normal' },
+    { path: '../public/fonts/Manrope/static/Manrope-Regular.ttf', weight: '400', style: 'normal' },
+    { path: '../public/fonts/Manrope/static/Manrope-Medium.ttf', weight: '500', style: 'normal' },
+    { path: '../public/fonts/Manrope/static/Manrope-SemiBold.ttf', weight: '600', style: 'normal' },
+    { path: '../public/fonts/Manrope/static/Manrope-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '../public/fonts/Manrope/static/Manrope-ExtraBold.ttf', weight: '800', style: 'normal' },
+    // variable font as fallback
+    { path: '../public/fonts/Manrope/Manrope-VariableFont_wght.ttf', weight: '100 900', style: 'normal' },
+  ],
+  display: 'swap',
+  variable: '--font-manrope',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased`}
       >
         {children}
       </body>
