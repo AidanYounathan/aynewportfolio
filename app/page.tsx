@@ -1,7 +1,7 @@
-import Image from "next/image";
 import HeaderComponent from "./components/HeaderComponent";
 import HeroComponent from "./components/HeroComponent";
 import AboutMeComponent from "./components/AboutMeComponent";
+import FeaturedWork from "./components/FeaturedWork";
 
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
       <HeaderComponent />
       <HeroComponent />
       <AboutMeComponent />
+      <FeaturedWork />
     </main>
   );
 }
