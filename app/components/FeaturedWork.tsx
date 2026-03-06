@@ -10,7 +10,10 @@ const FeaturedWork = () => {
             {/* Big container */}
             <div className="mt-10 rounded-3xl bg-(--cardbg) p-6 gap-8 w-full">
                 <Image className="rounded-md" src="/path/to/image.jpg" alt="Featured Work" width={800} height={400} />
-                <h3 className="text-2xl text-var(--grey)">Project Title</h3>
+                <div>
+                    <h3 className="text-2xl text-var(--grey)">Project Title</h3>
+                </div>
+                
             </div>
             {/* Small containers */}
             <div className="grid grid-cols-2">
