@@ -6,7 +6,7 @@ import FeaturedWork from "./components/FeaturedWork";
 
 export default function Home() {
   return (
-    <main className="px-55">
+    <main className="px-55 font-(family-name:--) ">
       <HeaderComponent />
       <HeroComponent />
       <AboutMeComponent />
