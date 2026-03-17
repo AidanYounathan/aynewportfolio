@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const HeaderComponent = () => {
     return (
-        <div className=" flex mt-14 font-[family-name:var(--font-manrope)]">
+        <div className=" flex mt-14 font-(family-name:--font-manrope)">
             <div className="text-[64px] font-bold text-var(--foreground)">
                 <h1 className="leading-[1.2] mb-3">
                     <span className="block">Aidan</span>
