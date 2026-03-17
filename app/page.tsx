@@ -1,7 +1,7 @@
 import HeaderComponent from "./components/HeaderComponent";
 import HeroComponent from "./components/HeroComponent";
 import AboutMeComponent from "./components/AboutMeComponent";
-import FeaturedWork from "./components/FeaturedWork";
+import FeaturedWork from "./components/FeaturedWorkComponent";
 
 
 export default function Home() {
