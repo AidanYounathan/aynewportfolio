@@ -15,12 +15,13 @@ const FeaturedWork = () => {
             {/* Big container */}
             <div className="mt-10">
                 <ProjectCard
-                    title="Tip Calculator"
-                    image="/images/tipCalculator.png"
-                    description="Frontend-focused UI implementation based on a design challenge. Delivered pixel‑accurate layout, input validation, and a mobile-first experience using Next.js and TypeScript."
-                    tags={["React", "TypeScript", "Tailwind CSS"]}
-                    githubLink="https://github.com"
-                    websiteLink="https://example.com"
+                    
+                    title="One Dex"
+                    image="/images/oneDexPic.png"
+                    description="Pokedex-style single-pagae app consuming the public Pokemon API. Focused on performant search, filtering, and a lightweight, accessible UI built with React and TypeScript."
+                    tags={["React + TypeScript", "Tailwind CSS", "REST API"]}
+                    githubLink="https://github.com/AidanYounathan/younathanapokemonapireactbuild"
+                    websiteLink="https://younathanapokemonapireactbuild.vercel.app/"
                 />
             </div>
             {/* Small containers */}
@@ -34,12 +35,12 @@ const FeaturedWork = () => {
                     websiteLink="https://younathan-a-influential-person-website.vercel.app/"
                 />
                 <SmallProjectCard
-                    title="One Dex"
-                    image="/images/oneDexImg.png"
-                    description="Pokedex-style single-pagae app consuming the public Pokemon API. Focused on performant search, filtering, and a lightweight, accessible UI built with React and TypeScript."
-                    tags={["Next.js", "Node.js"]}
-                    githubLink="https://github.com/AidanYounathan/younathanapokemonapireactbuild"
-                    websiteLink="https://younathanapokemonapireactbuild.vercel.app/"
+                    title="Tip Calculator"
+                    image="/images/tipCalculator.png"
+                    description="Frontend-focused UI implementation based on a design challenge. Delivered pixel‑accurate layout, input validation, and a mobile-first experience using Next.js and TypeScript."
+                    tags={["React", "TypeScript", "Tailwind CSS"]}
+                    githubLink="https://github.com"
+                    websiteLink="https://example.com"
                 />
             </div>
         </div>
