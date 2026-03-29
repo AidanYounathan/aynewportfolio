@@ -6,11 +6,13 @@ import FeaturedWork from "./components/FeaturedWorkComponent";
 
 export default function Home() {
   return (
-    <main className="px-55 font-(family-name:--) ">
+    <main className="min-h-screen w-full flex flex-col items-center bg-[var(--background)] font-sans">
       <HeaderComponent />
-      <HeroComponent />
-      <AboutMeComponent />
-      <FeaturedWork />
+      <section className="w-full max-w-5xl px-4">
+        <HeroComponent />
+        <AboutMeComponent />
+        <FeaturedWork />
+      </section>
     </main>
   );
 }

@@ -31,7 +31,7 @@ const SmallProjectCard = ({ title, image, description, tags, githubLink, website
                     </div>
                 )}
 
-                {description && <p className="mt-3 text-sm text-var(--grey)">{description}</p>}
+                {description && <p className="mt-3 text-sm md:text-[18px] text-var(--grey)">{description}</p>}
 
                 <div className="mt-4 flex justify-end gap-2">
                     {githubLink && (
@@ -39,7 +39,7 @@ const SmallProjectCard = ({ title, image, description, tags, githubLink, website
                             href={githubLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-4 py-0.5 bg-white text-[#2D5A3D] border-2 border-[#406B2A] rounded-full font-semibold text-sm hover:bg-[#f0f5f1] transition-colors"
+                            className="px-6 py-1 bg-white text-[#2D5A3D] border-2 border-[#406B2A] rounded-full font-semibold text-xl hover:bg-[#f0f5f1] transition-colors"
                         >
                             GitHub
                         </a>
@@ -49,7 +49,7 @@ const SmallProjectCard = ({ title, image, description, tags, githubLink, website
                             href={websiteLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-4 py-0.5 bg-[#406B2A] text-[#F5F0E8] border-2 border-[#406B2A] rounded-full font-semibold text-sm hover:opacity-90 transition-opacity inline-flex items-center gap-1.5"
+                            className="px-6 py-1 bg-[#406B2A] text-[#F5F0E8] border-2 border-[#406B2A] rounded-full font-semibold text-xl hover:opacity-90 transition-opacity inline-flex items-center gap-2"
                         >
                             Website
                             <Image src="/images/arrow.svg" alt="arrow" width={12} height={12} />
