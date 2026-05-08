@@ -12,41 +12,39 @@ const FeaturedWork = () => {
                 {/* Large card on desktop/tablet, small card on mobile */}
                 <div className="hidden sm:block">
                     <ProjectCard
-                        title="One Dex"
-                        image="/images/oneDexImg2.png"
-                        description="Pokedex-style single-pagae app consuming the public Pokemon API. Focused on performant search, filtering, and a lightweight, accessible UI built with React and TypeScript."
-                        tags={["Next.js + TypeScript", "Tailwind CSS", "REST API"]}
-                        githubLink="https://github.com/AidanYounathan/younathanapokemonapireactbuild"
-                        websiteLink="https://younathanapokemonapireactbuild.vercel.app/"
+                        title="CVYG Check-In"
+                        image="/images/cvygCheck.png"
+                        description="QR-code-based event check-in system for a church youth group. Built rotating single-use tokens, GPS geofencing, and device fingerprinting for attendance integrity — plus an admin dashboard with analytics and a no-code form builder."
+                        tags={["Next.js + TypeScript", "PostgreSQL", "Prisma"]}
+                        githubLink="https://github.com/AidanYounathan/cvygcheck"
+                        websiteLink="https://cvygcheck.vercel.app"
                     />
                 </div>
                 <div className="block sm:hidden">
                     <SmallProjectCard
-                        title="One Dex"
-                        image="/images/oneDexImg2.png"
-                        description="Pokedex-style single-pagae app consuming the public Pokemon API. Focused on performant search, filtering, and a lightweight, accessible UI built with React and TypeScript."
-                        tags={["Next.js + TypeScript", "Tailwind CSS", "REST API"]}
-                        githubLink="https://github.com/AidanYounathan/younathanapokemonapireactbuild"
-                        websiteLink="https://younathanapokemonapireactbuild.vercel.app/"
+                        title="CVYG Check-In"
+                        image="/images/cvygCheck.png"
+                        description="QR-code-based event check-in system for a church youth group. Built rotating single-use tokens, GPS geofencing, and device fingerprinting for attendance integrity — plus an admin dashboard with analytics and a no-code form builder."
+                        tags={["Next.js + TypeScript", "PostgreSQL", "Prisma"]}
+                        githubLink="https://github.com/AidanYounathan/cvygcheck"
+                        websiteLink="https://cvygcheck.vercel.app"
                     />
                 </div>
                 {/* Small cards grid, responsive */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <SmallProjectCard
-                        title="Most Influential Person"
-                        image="/images/tylerImg.png"
-                        description="Content-driven site emphasizing accessibility and SEO. Built a simple content pipeline and responsive templates to improve readability and load performance."
-                        tags={["React", "Markdown", "Tailwind CSS"]}
-                        githubLink="https://github.com/AidanYounathan/AYTylerFanRedo.git"
-                        websiteLink="https://ay-tyler-fan-redo.vercel.app"
+                        title="Seledon Literacy"
+                        image="/images/seledonLiteracy.png"
+                        description="Site for the Susie Seledon Literacy Fund, connecting Gilroy families with free books for children ages 0–5. Built enrollment flows, multilingual support, and a content-rich community literacy section."
+                        tags={["Next.js", "TypeScript", "Tailwind CSS"]}
+                        websiteLink="https://seledon-literacy.pages.dev/"
                     />
                     <SmallProjectCard
-                        title="Tip Calculator"
-                        image="/images/tipCalculator.png"
-                        description="Frontend-focused UI implementation based on a design challenge. Delivered pixel‑accurate layout, input validation, and a mobile-first experience using Next.js and TypeScript."
-                        tags={["React", "TypeScript", "Tailwind CSS"]}
-                        githubLink="https://github.com"
-                        websiteLink="https://example.com"
+                        title="Brown Issues"
+                        image="/images/brownIssues.png"
+                        description="WordPress site for a Bay Area digital news publication. Built a custom auto-scrolling marquee and reusable page templates. Led a full accessibility overhaul and SEO initiative that pushed performance scores to 85–90+."
+                        tags={["WordPress", "Accessibility", "SEO"]}
+                        websiteLink="https://brownissuestv.org/"
                     />
                 </div>
             </div>
