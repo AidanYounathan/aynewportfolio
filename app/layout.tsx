@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import localFont from 'next/font/local'
 import "./globals.css";
+import ConsoleHeader from "./components/ConsoleHeader";
+import Footer from "./components/Footer";
+import SmoothScroll from "./components/SmoothScroll";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  style: ["normal", "italic"],
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-instrument",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains",
 });
 
 const manrope = localFont({
@@ -30,8 +37,8 @@ const manrope = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Aidan Younathan - SWE",
-  description: "Aidan Younathan's personal portfolio website",
+  title: "Aidan Younathan — Software Engineer",
+  description: "Software engineer building end-to-end systems with a focus on accessibility, reliability, and maintainable architecture.",
 };
 
 export default function RootLayout({
@@ -40,11 +47,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">  
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased`}
+        className={`${instrumentSerif.variable} ${jetbrainsMono.variable} ${manrope.variable} antialiased`}
       >
+        <SmoothScroll />
+        <ConsoleHeader />
         {children}
+        <Footer />
       </body>
     </html>
   );

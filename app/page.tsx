@@ -1,18 +1,18 @@
-import HeaderComponent from "./components/HeaderComponent";
-import HeroComponent from "./components/HeroComponent";
-import AboutMeComponent from "./components/AboutMeComponent";
+import Hero from "./components/Hero";
+import SkillsMarquee from "./components/SkillsMarquee";
+import FigRow from "./components/FigRow";
+import AboutBand from "./components/AboutBand";
 import FeaturedWork from "./components/FeaturedWorkComponent";
-
+import Reveal from "./components/Reveal";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full flex flex-col items-center bg-[var(--background)] font-sans">
-      <HeaderComponent />
-      <section className="w-full max-w-5xl px-4">
-        <HeroComponent />
-        <AboutMeComponent />
-        <FeaturedWork />
-      </section>
+    <main className="min-h-screen w-full bg-[var(--background)] font-sans">
+      <Reveal><Hero /></Reveal>
+      <Reveal delay={60}><SkillsMarquee /></Reveal>
+      <Reveal delay={120}><FigRow /></Reveal>
+      <Reveal><AboutBand /></Reveal>
+      <Reveal delay={60}><FeaturedWork /></Reveal>
     </main>
   );
 }

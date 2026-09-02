@@ -6,23 +6,24 @@
   --cardbg: #F4F2EB;
   --lightgreen: #D9E7CB;
   --forestgreen: #406B2A;
+  --forestgreen-deep: #2F5220;
+  --ink: #3F433D;
+  --dark: #2B2E29;
+  --amber: #D18F1E;
+  --amber-text: #B57A15;
+  --muted: #6B7067;
+  --faint: #9AA095;
+  --hairline: #E6E3D8;
+  --hairline-2: #DFDCD1;
+  --row-hover: #FAF8F0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-manrope);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-      --background: #FFFDF6;
-  --foreground: #555954;
-  --cardbg: #F4F2EB;
-  --lightgreen: #D9E7CB;
-  --forestgreen: #406B2A;
-  }
+  --font-mono: var(--font-jetbrains);
+  --font-serif: var(--font-instrument), Georgia, serif;
 }
 
 body {
@@ -33,4 +34,66 @@ body {
 
 button, a, input, select, textarea {
   font-family: inherit;
+}
+
+::selection {
+  background: var(--lightgreen);
+  color: var(--ink);
+}
+
+/* Graph-paper backdrop used behind the hero */
+.grid-paper {
+  background-image:
+    linear-gradient(#F1EEE4 1px, transparent 1px),
+    linear-gradient(90deg, #F1EEE4 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes caret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Scroll-reveal (design spec): fade + 26px rise, revealed by IntersectionObserver */
+.om-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.om-reveal.om-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .om-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.animate-marquee {
+  animation: marquee 26s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-caret {
+  animation: caret 1.1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-caret {
+    animation: none;
+  }
 }
