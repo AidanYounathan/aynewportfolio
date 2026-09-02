@@ -75,7 +75,8 @@ const Terminal = () => {
             </div>
             <div
                 ref={scrollRef}
-                className="px-4 pt-4 pb-1.5 font-mono text-[13px] leading-[1.75] h-[244px] overflow-auto flex flex-col data-lenis-prevent"
+                className="px-4 pt-4 pb-1.5 font-mono text-[13px] leading-[1.75] h-[244px] overflow-auto flex flex-col"
+                data-lenis-prevent
                 aria-live="polite"
             >
                 {lines.map((ln, i) => (
