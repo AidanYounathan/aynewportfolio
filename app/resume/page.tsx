@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 const certifications = [
     "Anthropic — AI Fluency: Framework & Foundations",
     "Anthropic — Claude 101",
-    "Codecademy — JavaScript · TypeScript · React · Python 3",
 ];
 
 export default function Resume() {
@@ -68,7 +67,7 @@ export default function Resume() {
                             </div>
                             <div className="border-t border-[#E0DDD1] pt-3.5 flex flex-col gap-1">
                                 <div className="font-serif text-[21px] text-[var(--ink)]">CodeStack Academy</div>
-                                <div className="text-[13.5px] text-[var(--muted)]">Certified Software Engineer · 1,100+ hours full-time</div>
+                                <div className="text-[13.5px] text-[var(--muted)]">Certified Software Engineer · year-long program, 1,100+ hours</div>
                                 <div className="text-[13.5px] text-[var(--muted)]">Congressional Recognition</div>
                                 <div className="font-mono text-[11px] text-[var(--amber-text)] mt-0.5">2023 – 2024</div>
                             </div>
