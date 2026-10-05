@@ -17,7 +17,7 @@ const AboutBand = () => {
                         I&apos;m a full-stack engineer at DigitalNEST, promoted to Senior Software Engineering Associate within a year — I lead a team of three engineers and own client projects end to end, from scoping through deployment.
                     </p>
                     <p className="text-[17px] leading-[1.7] text-pretty">
-                        My work spans accessibility engineering on high-revenue production platforms, real-time computer vision for public installations, and independently built apps serving real users.
+                        My work spans accessibility engineering on a seven-figure e-commerce platform, real-time computer vision for a public installation, and a solo-built check-in app in live use at two parishes.
                     </p>
                     <div className="flex flex-wrap gap-[26px] mt-1">
                         {stats.map(({ value, label }) => (

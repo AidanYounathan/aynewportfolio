@@ -9,13 +9,14 @@ export type Project = {
 }
 
 // Work page + featured list (design section #4a / #3a)
+// Content mirrors Resume_Facts_Record.md (Oct 3, 2026). Change the record first, then this file.
 export const work: Project[] = [
     {
         title: "CVYG Check-In",
         image: "/images/cvygCheck.png",
         year: "2026",
-        blurb: "Full-stack event check-in platform built solo, from problem definition through production — rolling out across two parishes serving ~200 youth members. Single-use, time-limited QR codes with rotating server-side tokens, GPS geofencing, device fingerprinting, an admin analytics dashboard, and a no-code form builder. Vitest coverage on token rotation and geofence validation.",
-        tagline: "Next.js 15 · TypeScript · PostgreSQL · Vitest · Recharts",
+        blurb: "Event check-in platform built solo after youth members were getting conference credit for attendance they didn't have. Deployed across two parishes for a youth community of about 200. Server-enforced controls: single-use QR tokens that expire after two minutes, GPS geofencing, and a limit of one check-in per device per day. Admin dashboard with arrival, parish, and all-time charts, plus a no-code form builder so organizers add fields without code changes. Vitest unit tests on token and geofence logic.",
+        tagline: "Next.js 16 · TypeScript · PostgreSQL · Prisma · Vitest · Recharts",
         github: "github.com/AidanYounathan/cvygcheck",
         site: "cvygcheck.vercel.app",
     },
@@ -23,21 +24,14 @@ export const work: Project[] = [
         title: "Sound Canvas",
         image: null,
         year: "2026",
-        blurb: "Interactive museum exhibit installed and running at the MOCHIMU children's museum. Built the player-tracking pipeline — an Orbbec Femto Mega depth camera streaming real-time motion data over OSC — and the gesture-recognition logic translating body movement into expressive visual and audio output. 8-person DigitalNEST team.",
-        tagline: "Depth camera · OSC · TouchDesigner · C#",
-    },
-    {
-        title: "SoundReel",
-        image: null,
-        year: "2026",
-        blurb: "Full-stack audio streaming app built solo. Async FastAPI backend with HTTP Range support for seek-while-streaming playback; typed React Native (Expo) client with Zustand state management, background playback, and lock-screen media controls.",
-        tagline: "Python · FastAPI · React Native · Expo · Zustand",
+        blurb: "Interactive exhibit installed and running at the Modesto Children's Museum, built by an 8-person DigitalNEST team. I built the tracking pipeline (an Orbbec Femto Mega depth camera over ethernet, streaming real-time motion data via OSC into TouchDesigner) and the gesture recognition that drives the visuals, iterating through feedback rounds with museum staff.",
+        tagline: "Depth camera · OSC · TouchDesigner",
     },
     {
         title: "Brown Issues",
         image: "/images/brownIssues.png",
         year: "2025",
-        blurb: "WordPress site for a Bay Area digital news publication. Custom auto-scrolling marquee, reusable page templates, and an accessibility and SEO overhaul — ARIA labels, semantic HTML, systematic image optimization — contributing to 85–90+ performance scores.",
+        blurb: "WordPress site for a DigitalNEST client, built with a 4+ person team. I built the auto-scrolling marquee carousel and reusable page templates, and owned the accessibility and SEO work (ARIA labels, semantic HTML, image optimization), bringing Lighthouse Accessibility and SEO scores to 85–90+.",
         tagline: "WordPress · Accessibility · SEO",
         site: "brownissuestv.org",
     },
@@ -45,16 +39,23 @@ export const work: Project[] = [
         title: "DigitalNEST Impact Page",
         image: null,
         year: "2025",
-        blurb: "Built and animated a responsive page section shipped to production with a 6-person team — cross-browser consistency, mobile layout fidelity, and accessibility standards across contributed components.",
+        blurb: "Built and animated a responsive section of DigitalNEST's Impact Page with a 6-person team, with semantic markup and ARIA on my components, shipped to production through reviewed pull requests.",
         tagline: "React · TypeScript",
         site: "digitalnest.org/our-impact",
+    },
+    {
+        title: "SoundReel",
+        image: null,
+        year: "2026",
+        blurb: "Personal mobile app. Async FastAPI backend that offloads blocking work to a worker thread and serves audio through FileResponse, which handles HTTP Range requests so playback can seek. Typed React Native (Expo) client with Zustand state, background playback, and remote media controls.",
+        tagline: "Python · FastAPI · React Native · Expo · Zustand",
     },
     {
         title: "Caddy Track",
         image: null,
         year: "2024",
-        blurb: "Golf performance tracker built by a 3-person Agile team I led at CodeStack Academy — authentication, persistent profiles, responsive dashboards, interactive performance charts, and a real-time live chat system.",
-        tagline: "Next.js · TypeScript · C#/.NET · SQL",
+        blurb: "CodeStack Academy team project. I led the 3-person team and built the entire frontend, including user profiles, dashboards, and charts; teammates built the C#/.NET backend, authentication, and live chat.",
+        tagline: "Next.js · TypeScript",
     },
 ]
 
@@ -65,8 +66,6 @@ export const marqueeSkills = [
     "TypeScript",
     "React",
     "Next.js",
-    "Node.js",
-    "C#/.NET",
     "Python",
     "PostgreSQL",
     "React Native",
@@ -76,62 +75,58 @@ export const marqueeSkills = [
 
 // Stack layers — terminal `stack` command + resume sidebar
 export const stackLayers = [
-    { mark: "01", label: "Application", items: ["TypeScript", "React", "Next.js", "React Native / Expo", "WCAG 2.2 AA · ARIA"] },
-    { mark: "02", label: "Services", items: ["Node.js", "C#/.NET (ASP.NET Core)", "FastAPI (Python)", "PHP", "REST API design"] },
-    { mark: "03", label: "Data", items: ["PostgreSQL", "SQLite", "Relational schema design", "SQL"] },
+    { mark: "01", label: "Application", items: ["TypeScript", "React", "Next.js", "Vite", "React Native / Expo", "WCAG 2.2 AA · ARIA"] },
+    { mark: "02", label: "Services", items: ["Next.js route handlers", "FastAPI (Python)", "PHP", "Cloudflare Workers"] },
+    { mark: "03", label: "Data", items: ["PostgreSQL", "Prisma", "SQLite", "Cloudflare D1", "SQL"] },
     { mark: "04", label: "Interactive systems", items: ["Depth camera integration", "Real-time motion tracking", "Gesture recognition", "OSC pipelines", "TouchDesigner"] },
-    { mark: "05", label: "Practice", items: ["Git/GitHub · CI/CD", "Vitest testing", "Code reviews · Agile/Scrum", "Claude Code · Cursor · Copilot"] },
+    { mark: "05", label: "Practice", items: ["Git/GitHub", "Vitest testing", "Claude Code · Cursor"] },
 ]
 
-// Experience — about page + resume page
+// Experience — about page + resume page. CodeStack is unpaid training and stays labeled as a program.
 export const experience = [
     {
         dates: "August 2026 – Present",
         title: "Senior Software Engineering Associate",
-        company: "DigitalNEST",
-        tags: ["Team lead", "Client management", "React", "Next.js", "Node.js"],
+        company: "DigitalNEST · Stockton, CA",
+        tags: ["Team lead", "Client management", "React", "Next.js", "Accessibility"],
         bullets: [
-            "Lead a team of 3 engineers, owning technical direction, sprint planning, code review, and delivery across concurrent client projects.",
-            "Serve as primary client point of contact: run requirements meetings, scope technical solutions, and manage deadlines and delivery expectations directly with stakeholders.",
-            "Own client projects end to end, from initial requirements and architecture through implementation, deployment, and post-launch support.",
-            "Advise engineering teams across additional DigitalNEST locations on technical approach and standards.",
+            "Lead a team of 3 engineers and serve as primary client contact on two concurrent client projects, owning each from requirements and scoping through delivery, working with DigitalNEST's designers.",
+            "Took over as lead on Seledon with the promotion; integrating Google Apps Script so the client can edit the main-page chart's data from a Google Sheet.",
+            "Advise engineering teams at other DigitalNEST locations on technical approach.",
         ],
     },
     {
         dates: "September 2025 – August 2026",
         title: "Software Engineer",
-        company: "DigitalNEST",
-        tags: ["React", "Next.js", "TypeScript", "WordPress", "Computer vision"],
+        company: "DigitalNEST · Modesto, CA",
+        tags: ["React", "Vite", "TypeScript", "WordPress", "Computer vision"],
         bullets: [
-            "Engineered the depth-camera tracking and gesture-recognition pipeline for Sound Canvas, an interactive exhibit now installed and running at the MOCHIMU children's museum.",
-            "Shipped client-facing features across React, Next.js, Node.js, TypeScript, and WordPress, including animated page sections, reusable component libraries, and responsive layouts deployed across multiple client sites.",
-            "Developed accessible production interfaces using ARIA standards and semantic HTML, raising Lighthouse scores into the 85–90+ range across client projects.",
-            "Led SEO initiatives including systematic image optimization, alt text coverage, and structured content improvements.",
-            "Researched and evaluated AI development tooling, driving team adoption of Cursor, Claude Code, and Google Antigravity into daily engineering workflows.",
+            "Built the depth-camera tracking pipeline and gesture recognition for Sound Canvas, an interactive exhibit installed and running at the Modesto Children's Museum (8-person team).",
+            "Built most of the landing page and the About page for Seledon (Vite, React).",
+            "Owned accessibility and SEO work on two client sites, Seledon and Brown Issues, bringing Lighthouse Accessibility and SEO scores to 85–90+.",
+            "Researched and evaluated AI development tooling, driving team adoption of Cursor, Claude Code, and Google Antigravity.",
         ],
     },
     {
         dates: "June 2024 – December 2024",
         title: "Software Engineer",
-        company: "Trinchero Family Estates",
+        company: "Trinchero Family Estates · Napa, CA (Hybrid)",
         tags: ["WCAG 2.2 AA", "WordPress", "PHP", "JavaScript"],
         bullets: [
-            "Led a WCAG 2.2 AA accessibility upgrade across a production e-commerce platform generating $1.8M+ annually, raising compliance by 30 percent and contributing to a 10 percent increase in sales conversion.",
-            "Refactored and modernized legacy WordPress, PHP, and JavaScript codebases across business-critical ordering and checkout flows.",
-            "Debugged production defects end to end, from initial report through root-cause analysis to verified resolution, coordinating fixes with engineering and QA.",
-            "Built reusable UI components and API integrations across 600+ hours of hands-on development.",
+            "Delivered a solo WCAG 2.2 AA accessibility upgrade on a seven-figure WordPress, PHP, and JavaScript e-commerce platform: site-wide external audit score from about 65 to 90, Lighthouse Accessibility from about 72 to 97; contributed to a team-reported 10% conversion lift.",
+            "Raised Lighthouse SEO from about 65 to 95 through alt text and image optimization, meta tags, and heading structure.",
+            "Refactored legacy WordPress, PHP, and JavaScript in the ordering and checkout flows.",
         ],
     },
     {
         dates: "September 2023 – September 2024",
-        title: "Apprentice Software Engineer",
+        title: "Certified Software Engineer (training program)",
         company: "CodeStack Academy",
-        tags: ["C#/.NET", "Next.js", "SQL", "Agile"],
+        tags: ["Training", "Next.js", "TypeScript"],
         bullets: [
-            "Completed 1,100+ hours of full-time software engineering training covering data structures, algorithms, object-oriented design, REST APIs, relational databases, cloud deployment, and peer code review.",
-            "Led a 3-person Agile team building a full-stack application with a C#/.NET (ASP.NET Core) backend, SQL database, and Next.js frontend, owning architecture decisions, PR management, sprint planning, standups, and conflict resolution.",
-            "Delivered 8 solo web applications end to end, from requirements and design through deployment and technical documentation.",
-            "Received Congressional Recognition on program completion.",
+            "Year-long software engineering program, 1,100+ hours; Congressional Recognition.",
+            "Built 8 solo web applications.",
+            "Led a 3-person team on Caddy Track and built its entire frontend.",
         ],
     },
 ]

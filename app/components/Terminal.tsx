@@ -29,7 +29,7 @@ const run = (raw: string): TermLine[] | null => {
     ]
     if (cmd === "whoami") return [
         out("Aidan Younathan — Senior SWE Associate @ DigitalNEST, Modesto CA"),
-        out("TypeScript · React · Node.js · C#/.NET · Python · PostgreSQL"),
+        out("TypeScript · React · Next.js · Python · PostgreSQL"),
     ]
     if (cmd === "projects") return work.map(p => out(p.year + "  " + p.title.padEnd(18) + p.tagline))
     if (cmd === "stack") return stackLayers.map(l => out(l.mark + "  " + l.label.padEnd(13) + l.items.join(", ")))
@@ -37,7 +37,7 @@ const run = (raw: string): TermLine[] | null => {
         out("ayounathan05@gmail.com · (209) 985-2689", HIGHLIGHT),
         out("linkedin.com/in/aidan-younathan · github.com/AidanYounathan", HIGHLIGHT),
     ]
-    if (cmd === "uptime") return [out("team of 3 led · ~200 users on CVYG Check-In · $1.8M platform maintained · lighthouse 85–90+")]
+    if (cmd === "uptime") return [out("team of 3 led · CVYG live at 2 parishes · Sound Canvas installed · lighthouse 85–90+")]
     if (cmd === "clear") return null
     return [out("zsh: command not found: " + cmd + " — try `help`", ERROR)]
 }
